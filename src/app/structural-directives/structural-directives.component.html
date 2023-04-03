@@ -1,0 +1,36 @@
+<div class="border border-2 border-secondary">
+    <div class="bg-info text-center">Structural-directives</div>
+
+    <div class="row mt-2 mb-2 p-2">
+        <div class="col">
+            <button (click)="toggleParagraph()" class="btn btn-primary">
+                {{ paragraphVisible ? "Hide" : "Reveal" }}
+            </button>
+        </div>
+
+        <div class="col" *ngIf="paragraphVisible">
+            {{ paragraph }}
+        </div>
+    </div>
+
+    <div class="p-2">
+        <table class="table">
+            <thead class="table-info">
+                <tr>
+                    <td>#</td>
+                    <td>First Name</td>
+                    <td>Last Name</td>
+                    <td>Age</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of userData; index as i">
+                    <td>{{ i }}</td>
+                    <td>{{ user.firstname }}</td>
+                    <td>{{ user.lastname }}</td>
+                    <td>{{ user.age }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

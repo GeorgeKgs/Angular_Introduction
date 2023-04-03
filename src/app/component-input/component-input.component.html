@@ -1,0 +1,25 @@
+<div class="border border-2 border-secondary">
+    <div class="bg-info text-center">component-input.component</div>
+
+    <div class="p-2">
+        <app-simple-table0 [userData]="userData"></app-simple-table0>
+        <!-- to [userdata] einai to property tou paidiou sto opoio pernaw thn timh pou exv sthn klash tou gonea -->
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <button (click)="sortByAgeDesc()" class="btn btn-primary btn-sm">Age descending</button>
+        </div>
+        <div class="col">
+            <button (click)="sortByAgeAsc()" class="btn btn-primary btn-sm">Age Asc</button>
+        </div>
+        <div class="col">
+            <button (click)="sortByAgeLastnameDesc()" class="btn btn-primary btn-sm">Age Lastname desc</button>
+        </div>
+        <div class="col">
+            <button (click)="init()" class="btn btn-primary btn-sm">Init</button>
+        </div>
+
+    </div>
+
+</div>

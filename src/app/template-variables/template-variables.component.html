@@ -1,0 +1,17 @@
+<div class="border border-2 border-secondary">
+    <div class="bg-info text-center">template-variables</div>
+
+    <div class="row mt-2 mb-2 p-2">
+        <div class="col">
+            <!-- me to # dinoume ena onoma sto input/template variable -->
+            <input #userInput type="text" class="form-control">
+        </div>
+
+        <div class="col">
+            <button (click)="log(userInput.value)" class="btn btn-primary">Conosle Log</button>
+        </div>
+        
+    </div>
+</div>
+
+
