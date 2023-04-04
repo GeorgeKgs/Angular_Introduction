@@ -19,6 +19,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { ChuckNorrisComponent } from './chuck-norris/chuck-norris.component';
+import { TemplateFormsComponent } from './template-forms/template-forms.component';
 
 const routes: Routes = [
   {path: 'greeting', component: GreetingComponent},
@@ -28,6 +29,7 @@ const routes: Routes = [
   {path: 'structural-directives', component: StructuralDirectivesComponent},
   {path: 'template-variables', component: TemplateVariablesComponent},
   {path: 'component-input', component: ComponentInputComponent},
+  {path: 'template-forms', component: TemplateFormsComponent},
   {path: 'chuck-norris', component: ChuckNorrisComponent},
   {path: 'component-input-output', component: ComponentInputOutputComponent},
   {path: '', component: WelcomeComponent},
@@ -50,7 +52,8 @@ const routes: Routes = [
     WelcomeComponent,
     PageNotFoundComponent,
     SideBarComponent,
-    ChuckNorrisComponent
+    ChuckNorrisComponent,
+    TemplateFormsComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
