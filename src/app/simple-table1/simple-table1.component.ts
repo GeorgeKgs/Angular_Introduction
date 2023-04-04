@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import  { User } from '../component-input-output.component';
+import  { User } from '../app.interfaces';
 
 @Component({
   selector: 'app-simple-table1',
@@ -11,8 +11,14 @@ export class SimpleTable1Component {
 
   @Output() delete = new EventEmitter<number>();
 
-  onDelete(i: number) {
+  @Output() sendUser = new EventEmitter<User>();
+
+  onDeleteButtonClick(i: number) {
     this.delete.emit(i);
+  }
+
+  onSendUserButtonClick(user: User) {
+    this.sendUser.emit(user);
   }
 
 }

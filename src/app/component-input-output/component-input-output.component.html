@@ -1,1 +1,15 @@
-<app-simple-table1 (delete)="onDelete($event)" [userData]="userData"></app-simple-table1>
+<app-simple-table1 
+(delete)="onDelete($event)" 
+(sendUser)="onRecievedUser($event)"
+[userData]="userData">
+</app-simple-table1>
+
+<div *ngIf="receivedUser" class="card w-50">
+    <div class="card-body">
+        <h5 class="card-title">{{receivedUser.lastname}}</h5>
+        <h6 class="card-subtitle">{{receivedUser.firstname}}</h6>
+        <p 
+        class="card-text">{{receivedUser.firstname}}'s age is {{receivedUser.age}}
+        </p>
+    </div>
+</div>
